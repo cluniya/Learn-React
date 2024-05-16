@@ -9,7 +9,7 @@ function Expenses() {
   ];
 
   return (
-    <div>
+    <div className="expenses">
       {expenses.map((expense, index) => {
         return (
           <ExpenseItem
