@@ -1,11 +1,14 @@
-export default function ExpenseItem () {
-    return <div>
-  
-      <h1>This is expense item!</h1>
-      <p>Food - $5</p>
-      <p>Petrol - $20</p>
-      <p>Movie - $10</p>
-      
-          </div>
+export default function ExpenseItem() {
+    return (
+      <div>
+        <div>15 August 2023</div>
+        <div>Delhi</div>
+        <div>
+          <h2>Book</h2>
+          <div>$10</div>
+          
+        </div>
+      </div>
+      )
   }
   
