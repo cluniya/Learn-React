@@ -4,7 +4,7 @@ const ExpenseForm = (props) => {
     const [enteredTitle, setEnteredTitle] = useState("");
     const [enteredAmount,setEnteredAmount] = useState("");
     const [enteredDate,setEnteredDate] = useState("");
-    const [userInput,setUserInput] = useState()
+    
   
     const titleChangeHandler = (event) => {
       setEnteredTitle(event.target.value);
@@ -19,7 +19,7 @@ const ExpenseForm = (props) => {
         event.preventDefault();
         const expenseDataofUser={
             title: enteredTitle,
-            amount: enteredAmount.toString(), // Convert amount to string
+            price: enteredAmount.toString(), // Convert amount to string
             date: new Date(enteredDate),
         }
         props.onSaveExpenseData(expenseDataofUser);
