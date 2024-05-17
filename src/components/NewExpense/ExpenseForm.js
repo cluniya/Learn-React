@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import "./ExpenseForm.css"
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     const [enteredTitle, setEnteredTitle] = useState("");
     const [enteredAmount,setEnteredAmount] = useState("");
     const [enteredDate,setEnteredDate] = useState("");
@@ -17,15 +17,15 @@ const ExpenseForm = () => {
     };
     const formSubmitHandler=(event)=>{
         event.preventDefault();
-        const data={
-            title:enteredTitle,
-            amount:enteredAmount,
-            date:new Date(enteredDate),
+        const expenseDataofUser={
+            title: enteredTitle,
+            amount: enteredAmount.toString(), // Convert amount to string
+            date: new Date(enteredDate),
         }
+        props.onSaveExpenseData(expenseDataofUser);
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
-        console.log(data);
     }
   
     return (
